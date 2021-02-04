@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color-primary: hsl(300, 43%, 22%);
+
+$color-secondary: hsl(303, 10%, 53%);
+
+body{
+    font-size: 15px;
+    @media (max-width: 500px) {
+        font-size: 13px;
+    }
+}
+
+.challenge-2{
+    width: 1440px;
+    height: 800px;
+    margin: auto;
+    padding: 140px;
+    font-family: 'Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 1440px){
+        width: 100%;
+        height: 100%;
+        padding: 140px 20px;
+    }
+    &__pattern{
+        position: absolute;
+        &__top{
+            top: 0;
+            width: 45%;
+            left: 0;
+            @media (max-width: 500px) {
+                width: 75%;
+            }
+        }
+        &__bottom{
+            bottom: 0;
+            right: 0;
+            width: 88%;
+        }
+    }
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    @media (max-width: 1050px){
+        flex-direction: column;
+        align-items: center;
+    }
+    &__left{
+        margin-bottom: 30px;
+        @media (max-width: 1050px) {
+            text-align: center;
+        }
+        &__title{
+            color: $color-primary;
+            font-weight: 700;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        &__text{
+            color: $color-secondary;
+            font-weight: 500;
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &__rewiews{
+            background-color: hsl(300, 24%, 96%);
+            padding: 20px 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            width: 500px;
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            .all-star{
+                @media (max-width: 500px) {
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+            }
+            @media (max-width: 550px){
+                width: 100%;
+            }
+            &:nth-child(1){
+                @media (max-width: 1050px){
+                    transform: unset;
+                }
+                transform: translateX(-100px);
+            }
+            &:nth-child(2){
+                @media (max-width: 1050px){
+                    transform: unset;
+                }
+                transform: translateX(-50px);
+            }
+            i{
+                margin-right: 7px;
+                color: gold;
+            }
+            span{
+                margin-left: 30px;
+                color: $color-primary;
+                font-weight: 700;
+                @media (max-width: 500px) {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 1200px){
+        justify-content: center;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: $color-primary;
+        padding: 30px 25px;
+        border-radius: 10px;
+        width: 360px;
+        height: 255px;
+        margin: 10px;
+        &:nth-child(2){
+            transform: translateY(20px);
+            @media (max-width: 1200px){
+                transform: unset;
+            }
+        }
+        &:nth-child(3){
+            transform: translateY(40px);
+            @media (max-width: 1200px){
+                transform: unset;
+            }
+        }
+        &__profil{
+            display: flex;
+            align-items: center;
+            font-size: 0.8em;
+            img{
+                border-radius: 9999px;
+                width: 50px;
+                margin-right: 20px;
+            }
+            &__name{
+                color: hsl(300, 24%, 96%);
+                margin-bottom: 5px;
+            }
+            &__status{
+                color: hsl(333, 80%, 67%);
+                font-weight: 400;
+                opacity: 90%;
+            }
+        }
+        &__reviews{
+            color: hsl(300, 24%, 96%);
+            font-size: 0.9em;
+            line-height: 22px;
+        }
+    }
+}
